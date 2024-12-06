@@ -1,0 +1,14 @@
+<!-- <p>details works!</p>
+<p>{{id}}</p>
+ -->
+
+<div>
+    <h1 class="text-2xl font-bold">{{ pokemonStore.requestPokemons().name }}</h1>
+    <!-- <img [src]="pokemon.sprites.other['official-artwork'].front_default" [alt]="pokemon.name" class="w-40 h-40" /> -->
+    <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pokemonStore.requestPokemons().id + '.png'"
+        [alt]="pokemonStore.requestPokemons().name" class="h-20 w-20 object-cover" />
+    <p>ID: {{ pokemonStore.requestPokemons().id }}</p>
+    <p>Height: {{ pokemonStore.requestPokemons().height }}</p>
+    <p>Weight: {{ pokemonStore.requestPokemons().weight }}</p>
+    <p>Base Experience: {{ pokemonStore.requestPokemons().base_experience }}</p>
+</div>

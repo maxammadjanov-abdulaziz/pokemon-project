@@ -1,0 +1,9 @@
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+</h1>
+<div class="box"> @for (pokemon of pokemonStore.pokemonDetails(); track $index) {
+    <app-card [pokemon]="pokemon"></app-card>
+    }
+
+    <!-- <app-button></app-button> -->
+</div>

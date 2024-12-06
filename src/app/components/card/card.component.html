@@ -1,0 +1,23 @@
+<div class=" gap-6 p-4">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="bg-yellow-300 h-40 flex items-center justify-center">
+            <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pokemon.id + '.png'"
+                [alt]="pokemon.name" class="h-20 w-20 object-cover" />
+
+        </div>
+        <div class="p-4 text-center">
+            <h2 class="font-bold text-lg uppercase">{{ pokemon.name }}</h2>
+            <p class="text-sm text-gray-600">ID: {{ pokemon.id }}</p>
+            <div class="grid grid-cols-2 gap-2 my-2">
+                <p class="text-gray-500 text-sm">Height</p>
+                <p class="text-gray-500 text-sm">Experience</p>
+                <p class="font-medium">{{ pokemon.height }}</p>
+                <p class="font-medium">{{ pokemon.experience }}</p>
+            </div>
+            <button (click)="hondleNav(pokemon.name)"
+                class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded mt-2">
+                Show More
+            </button>
+        </div>
+    </div>
+</div>
